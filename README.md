@@ -75,6 +75,10 @@ Beadandónk egy a Ticketswap ötletén alapuló rendszer, amely lehetőve teszi 
     - Event (Event)
     - PriceLimit (Integer)
     - Buyer (User)
+    
+### UML
+![alt text](https://github.com/tiborelone/alk_fejl_beadando/blob/master/alk_uml.png)
+
 
 ### Végpontok
 
