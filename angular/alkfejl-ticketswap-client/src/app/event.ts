@@ -5,6 +5,7 @@ export class Event {
     id: number;
     name: string;
     date: string;
-    ticketsale: Array<TicketSale>;
+    ticketSale: Array<TicketSale>;
     ticketWanted: Array<TicketWanted>;
+
 }

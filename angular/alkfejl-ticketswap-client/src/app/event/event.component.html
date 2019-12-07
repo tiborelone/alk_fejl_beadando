@@ -1,0 +1,27 @@
+<h1>Events</h1>
+
+
+<div> <!-- *ngIf="isSelected == false"> if nothing is selected -->
+    <ul class="events">
+    <li *ngFor="let event of events">
+        <a routerLink="/eventdetail/{{event.id}}">
+        <span class="badge">{{event.id}}</span> {{event.name}}
+        </a><button class="delete" title="delete event"
+        (click)="delete(event)">x</button>
+    </li>
+    </ul>
+</div>
+
+<div>
+    <label>Event name:
+      <input #eventName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(eventName.value); eventName.value=''">
+      add
+    </button>
+</div>
+
+
+      
+
