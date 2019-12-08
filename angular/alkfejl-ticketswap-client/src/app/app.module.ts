@@ -22,11 +22,8 @@ import { MatSliderModule, MatInputModule, MatFormFieldModule, MatToolbarModule, 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { EventSearchComponent } from './event-search/event-search.component';
-<<<<<<< HEAD
 import { LoginFormComponent } from './login-form/login-form.component';
-=======
 import { TicketSearchComponent } from './ticket-search/ticket-search.component';
->>>>>>> origin/master
 
 
 @NgModule({
@@ -42,11 +39,8 @@ import { TicketSearchComponent } from './ticket-search/ticket-search.component';
     EventSearchComponent,
     TicketComponent,
     TicketDetailComponent,
-<<<<<<< HEAD
-    LoginFormComponent
-=======
+    LoginFormComponent,
     TicketSearchComponent
->>>>>>> origin/master
   ],
   imports: [
     BrowserModule,
