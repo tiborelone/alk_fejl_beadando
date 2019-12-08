@@ -11,10 +11,10 @@ export class InMemoryDataService implements InMemoryDbService {
 
   createDb() {
     const events = [
-      {id: 0, name: 'zero', date:'000000', ticketSale:null},
-      {id: 1, name: 'first', date:'000001', ticketSale:null},
-      {id: 2, name: 'second', date:'000010', ticketSale:null},
-      {id: 42, name: 'truth', date:'010101', ticketSale:null},
+      {id: 0, name: 'zero', date:'000000'},
+      {id: 1, name: 'first', date:'000001'},
+      {id: 2, name: 'second', date:'000010'},
+      {id: 42, name: 'truth', date:'010101'},
     ];
 
     const users = [
@@ -25,7 +25,8 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
     const tickets = [
-      {}
+      {id: 80, name: 'teszt',event: 0, barcode: 121112,seller: 123,price: 123},
+      {id: 81, name: 'teszt2',event: 0, barcode: 121112,seller: 10, price: 123}
     ];
 
 

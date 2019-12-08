@@ -4,6 +4,4 @@ export class Event {
     id: number;
     name: string;
     date: string;
-    ticketSale: Array<Ticket>;
-
 }

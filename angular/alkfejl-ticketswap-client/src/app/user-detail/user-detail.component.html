@@ -1,1 +1,8 @@
-<p>user-detail works!</p>
+<div *ngIf="user">
+    <h2>{{user.name | uppercase}} User:</h2>
+        <div>
+            User rating: {{user.rating}}/5
+        <div>
+    </div> 
+    <button mat-raised-button color="primary" (click)="goBack()">Return</button>
+</div>

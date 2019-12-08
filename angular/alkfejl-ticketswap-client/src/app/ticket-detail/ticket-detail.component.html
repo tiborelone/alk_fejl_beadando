@@ -1,1 +1,13 @@
-<p>ticket-detail works!</p>
+<div *ngIf="ticket">
+    <h2>{{ticket.name | uppercase}} Details</h2>
+        <div>
+            <div>
+                <a routerLink="/userdetail/{ticket.seller}}">Seller Details</a>
+            </div>
+        <div>
+            <span>price: </span>{{ticket.price}} HUF
+        </div>
+        
+    <button mat-raised-button color="primary" (click)="goBack()">Return</button>
+    <button mat-raised-button color="primary" >buy</button>
+</div>
