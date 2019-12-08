@@ -1,10 +1,9 @@
-import {User} from "./user";
 
 export class Ticket {
     id: number;
     name: string;
-    event: Event;
+    event: number;
     barcode: number;
-    seller: User;
+    seller: number;
     price: number;
 }

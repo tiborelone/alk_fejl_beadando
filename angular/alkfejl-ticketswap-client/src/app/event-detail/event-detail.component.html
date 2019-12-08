@@ -1,17 +1,11 @@
 <div *ngIf="event">
     <h2>{{event.name | uppercase}} Details</h2>
-        <div><span>id: </span>{{event.id}}</div>
-            <div>
-                <label>name:
-                <input [(ngModel)]="event.name" placeholder="name"/>
-                </label>
-            </div>
         <div>
             <span>date: </span>{{event.date}}
         </div>
-        <div>
-            <span>Tickets for Sale: </span> {{sumSales()}}
-        </div>
-    <button mat-raised-button color="primary" (click)="goBack()">go back</button>
-    <button mat-raised-button color="primary" (click)="save()">save</button>
+    
+</div>
+<app-ticket-search [n]="event.id"></app-ticket-search>
+<div>
+    <button mat-raised-button color="primary" (click)="goBack()">Return</button>
 </div>

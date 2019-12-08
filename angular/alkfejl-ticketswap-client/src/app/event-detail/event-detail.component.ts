@@ -34,11 +34,6 @@ export class EventDetailComponent implements OnInit {
     this.location.back();
   }
 
-  sumSales(): any{
-    if(this.event.ticketSale == null) return 0;
-    return this.event.ticketSale.length;
-  }
-
    save(): void {
     this.eventService.updateEvent(this.event)
       .subscribe(() => this.goBack());

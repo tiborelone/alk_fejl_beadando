@@ -4,9 +4,9 @@
     <ul class="users">
     <li *ngFor="let user of users">
         <a routerLink="/userdetail/{{user.id}}">
-        <span class="badge">{{user.id}}</span> {{user.name}}
-        </a><button class="delete" title="delete user"
-        (click)="delete(user)">x</button>
+        <span class="badge">{{user.id}}</span> {{user.name}}</a>
+        
+        <button class="delete" title="delete user"(click)="delete(user)">x</button>
     </li>
     </ul>
 </div>

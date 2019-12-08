@@ -1,0 +1,21 @@
+<div id="search-component">
+    <h4 class="text-center"><label for="search-box">Tickets for this event:</label></h4>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <mat-form-field>
+        <button mat-raised-button color="primary" (click)="search()">List Them</button>
+      </mat-form-field>
+    </div>
+  </div>
+  
+    <ul class="search-result">
+      <li *ngFor="let ticket of tickets$ | async" >
+        <a routerLink="/ticketdetail/{{ticket.id}}">
+          {{ticket.name}}
+        </a>
+        <p>{{ticket.price}} FT</p>
+      </li>
+    </ul>
+    
+  </div>
+ 
