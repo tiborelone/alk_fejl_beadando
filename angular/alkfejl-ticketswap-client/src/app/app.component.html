@@ -1,11 +1,24 @@
 <!-- <h1>{{title}}</h1>
-<router-outlet></router-outlet> -->
+<router-outlet></router-outlet> 
+
 <mat-toolbar color="primary">
     <span>{{title}}</span>
     <a mat-raised-button color="basic" routerLink="/dashboard" class="mx-2">Dashboard</a>
     <a mat-raised-button color="basic" routerLink="/event" class="mx-2">Events</a>
-    <a mat-raised-button color="basic" routerLink="/user" class="mx-2">Users</a>  
-  </mat-toolbar>
+    <a mat-raised-button color="basic" routerLink="/user" class="mx-2">Users</a>
+    <button mat-raised-button color="warn" (click)="logout()">Logout</button>  
+</mat-toolbar>
+-->
+
+
+    <mat-toolbar color="primary">
+        <span>{{title}}</span>
+        <a mat-raised-button color="basic" routerLink="/dashboard" class="mx-2">Dashboard</a>
+        <a mat-raised-button color="basic" routerLink="/event" class="mx-2">Events</a>
+        <a mat-raised-button color="basic" routerLink="/user" class="mx-2">Users</a>
+        <button mat-raised-button color="warn" routerLink="/login">Login</button>  
+    </mat-toolbar>
+   
 
 <router-outlet></router-outlet>
 <app-messages></app-messages>

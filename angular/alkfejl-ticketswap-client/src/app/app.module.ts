@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { EventComponent } from './event/event.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -20,6 +20,7 @@ import { MatSliderModule, MatInputModule, MatFormFieldModule, MatToolbarModule, 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { EventSearchComponent } from './event-search/event-search.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { EventSearchComponent } from './event-search/event-search.component';
     UserDetailComponent,
     EventSearchComponent,
     TicketComponent,
-    TicketDetailComponent
+    TicketDetailComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { EventSearchComponent } from './event-search/event-search.component';
     MatIconModule,
     MatButtonModule,
     MatDividerModule,
+    ReactiveFormsModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

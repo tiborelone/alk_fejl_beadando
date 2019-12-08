@@ -9,6 +9,8 @@ import { EventDetailComponent }  from './event-detail/event-detail.component';
 import { UserDetailComponent} from './user-detail/user-detail.component';
 import { TicketComponent } from "./ticket/ticket.component";
 import { TicketDetailComponent } from "./ticket-detail/ticket-detail.component";
+import { AuthGuard } from './auth.guard';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
@@ -19,7 +21,11 @@ const routes: Routes = [
   { path: 'eventdetail/:id', component: EventDetailComponent},
   { path: 'userdetail/:id', component: UserDetailComponent}, 
   { path: 'ticketdetail/:id', component: TicketDetailComponent}, 
-  { path: 'ticket', component: TicketComponent}
+  { path: 'ticket', component: TicketComponent},
+  {
+    path: 'login',
+    component: LoginFormComponent
+  },
 ];
 
 @NgModule({

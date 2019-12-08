@@ -5,6 +5,7 @@
  */
 package hu.elte.alkfejlbead.controllers;
 
+import hu.elte.alkfejlbead.security.AuthenticatedUser;
 import hu.elte.alkfejlbead.entities.Event;
 import hu.elte.alkfejlbead.entities.TicketSale;
 import hu.elte.alkfejlbead.entities.TicketWanted;
@@ -16,6 +17,8 @@ import java.util.Objects;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,9 +29,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin
 @RestController
-@RequestMapping("user")
+@RequestMapping("users")
 public class UserController {
+    
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
     
     @Autowired
     private TicketSaleRepository ticketSaleRepository;
@@ -41,6 +48,9 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
+    
+    @Autowired 
+    private AuthenticatedUser authenticatedUser;
     
     @GetMapping("")
     public ResponseEntity<Iterable<User>> getAll() {
@@ -82,8 +92,8 @@ public class UserController {
         }
         
         User userToUpdate = foundUser.get();
-        if(user.getUserName() != null) {
-            userToUpdate.setUserName(user.getUserName());
+        if(user.getUsername() != null) {
+            userToUpdate.setUsername(user.getUsername());
         }
         if(user.getPassword() != null) {
             userToUpdate.setPassword(user.getPassword());
@@ -186,16 +196,18 @@ public class UserController {
 
     @PostMapping("register")
     public ResponseEntity<User> register(@RequestBody User user) {
-        Optional<User> oUser = userRepository.findByUserName(user.getUserName());
+        Optional<User> oUser = userRepository.findByUsername(user.getUsername());
         if (oUser.isPresent()) {
             return ResponseEntity.badRequest().build();
         }
-//        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setEnabled(true);
+        user.setRole(User.Role.ROLE_USER);
         return ResponseEntity.ok(userRepository.save(user));
     }
 
     @PostMapping("login")
-    public ResponseEntity login(@RequestBody User user) {
-        return ResponseEntity.ok().build();
-    }
+    public ResponseEntity login() {
+      return ResponseEntity.ok(authenticatedUser.getUser());
+    } 
 }

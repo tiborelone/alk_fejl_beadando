@@ -1,0 +1,21 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <div *ngIf="message">
+          
+        </div>
+      
+        <mat-form-field>
+          <input matInput placeholder="Username" formControlName="username" required>
+          <mat-error *ngIf="username.invalid">Username is required</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <input matInput placeholder="Password" formControlName="password" required [type]="hidePassword ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hidePassword = !hidePassword"></mat-icon>
+          <mat-error *ngIf="password.invalid">Password is required</mat-error>
+        </mat-form-field>
+      
+        <div>
+          <button mat-flat-button type="submit" color="primary" [disabled]="form.invalid">Mentés</button>
+        </div>
+      </form>

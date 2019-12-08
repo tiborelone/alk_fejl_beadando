@@ -12,6 +12,8 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,11 +33,11 @@ import lombok.NoArgsConstructor;
 public class User implements Serializable{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
     @Column(nullable = false)
-    private String userName;
+    private String username;
     
     @Column(nullable = false)
     private String password;
@@ -45,6 +47,17 @@ public class User implements Serializable{
     
     @Column
     private Integer rating;
+    
+    @Column(nullable = false)
+    private boolean enabled;
+    
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Role role;
+    
+    public enum Role {
+        ROLE_GUEST, ROLE_USER, ROLE_ADMIN
+    }
     
     @JsonManagedReference
     @OneToMany
