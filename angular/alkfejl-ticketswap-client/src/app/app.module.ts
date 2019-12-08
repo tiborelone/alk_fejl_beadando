@@ -14,13 +14,19 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { TicketDetailComponent } from './ticket-detail/ticket-detail.component';
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule, MatInputModule, MatFormFieldModule, MatToolbarModule, MatIconModule, MatButtonModule, MatDividerModule } from '@angular/material';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { EventSearchComponent } from './event-search/event-search.component';
+<<<<<<< HEAD
 import { LoginFormComponent } from './login-form/login-form.component';
+=======
+import { TicketSearchComponent } from './ticket-search/ticket-search.component';
+>>>>>>> origin/master
 
 
 @NgModule({
@@ -36,7 +42,11 @@ import { LoginFormComponent } from './login-form/login-form.component';
     EventSearchComponent,
     TicketComponent,
     TicketDetailComponent,
+<<<<<<< HEAD
     LoginFormComponent
+=======
+    TicketSearchComponent
+>>>>>>> origin/master
   ],
   imports: [
     BrowserModule,
