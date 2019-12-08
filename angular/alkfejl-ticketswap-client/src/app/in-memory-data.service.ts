@@ -25,7 +25,7 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
     const tickets = [
-      {id: 80, name: 'teszt',event: 0, barcode: 121112,seller: 123,price: 123},
+      {id: 80, name: 'teszt',event: 0, barcode: 121112,seller: 50,price: 123},
       {id: 81, name: 'teszt2',event: 0, barcode: 121112,seller: 10, price: 123}
     ];
 
