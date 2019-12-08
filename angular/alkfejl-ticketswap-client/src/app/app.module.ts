@@ -12,12 +12,15 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { TicketDetailComponent } from './ticket-detail/ticket-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule, MatInputModule, MatFormFieldModule, MatToolbarModule, MatIconModule, MatButtonModule, MatDividerModule } from '@angular/material';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { EventSearchComponent } from './event-search/event-search.component';
-import { TicketComponent } from './ticket/ticket.component';
-import { TicketDetailComponent } from './ticket-detail/ticket-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -38,13 +41,22 @@ import { TicketDetailComponent } from './ticket-detail/ticket-detail.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatSliderModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDividerModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    ) 
+    ),
+
+    BrowserAnimationsModule 
   ],
   bootstrap: [AppComponent]
 })

@@ -2,24 +2,31 @@
 
 
 <div> <!-- *ngIf="isSelected == false"> if nothing is selected -->
-    <ul class="events">
-    <li *ngFor="let event of events">
-        <a routerLink="/eventdetail/{{event.id}}">
-        <span class="badge">{{event.id}}</span> {{event.name}}
-        </a><button class="delete" title="delete event"
-        (click)="delete(event)">x</button>
-    </li>
-    </ul>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <ul class="events w-100 text-center list-unstyled">
+      <li *ngFor="let event of events" class="my-3 bg-light rounded position-relative">
+          <a routerLink="/eventdetail/{{event.id}}">
+          <span class="badge">{{event.id}}</span> {{event.name}}
+          </a>
+          <button mat-mini-fab color="warn" class="delete-event-button position-absolute" title="delete event"
+          (click)="delete(event)">x</button>
+      </li>
+      </ul>
+      </div>    
+  </div>
 </div>
 
-<div>
-    <label>Event name:
-      <input #eventName />
-    </label>
-    <!-- (click) passes input value to add() and then clears the input -->
-    <button (click)="add(eventName.value); eventName.value=''">
-      add
-    </button>
+<div class="container">
+    <div class="row justify-content-md-center">
+      <mat-form-field>
+        <input matInput placeholder="Add an event" #eventName />
+      </mat-form-field>
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button mat-raised-button color="primary" (click)="add(eventName.value); eventName.value=''">
+        add
+      </button>
+  </div>
 </div>
 
 

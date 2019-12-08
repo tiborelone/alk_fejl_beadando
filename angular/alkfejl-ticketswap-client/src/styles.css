@@ -1,3 +1,6 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css";
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,6 +8,20 @@
 }
 
 body {
-    background: rgb(255, 203, 203);
+    background: rgb(216, 216, 216);
     color: #000000;
 }
+
+.events{
+    font-size:1.5em;
+}
+.delete-event-button{
+    right:0.3em;
+}
+.events li{
+    -webkit-box-shadow: 0 5px 6px -6px #777;
+       -moz-box-shadow: 0 5px 6px -6px #777;
+            box-shadow: 0 5px 6px -6px #777;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

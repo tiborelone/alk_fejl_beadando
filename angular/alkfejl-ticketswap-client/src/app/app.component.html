@@ -1,11 +1,11 @@
 <!-- <h1>{{title}}</h1>
 <router-outlet></router-outlet> -->
+<mat-toolbar color="primary">
+    <span>{{title}}</span>
+    <a mat-raised-button color="basic" routerLink="/dashboard" class="mx-2">Dashboard</a>
+    <a mat-raised-button color="basic" routerLink="/event" class="mx-2">Events</a>
+    <a mat-raised-button color="basic" routerLink="/user" class="mx-2">Users</a>  
+  </mat-toolbar>
 
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/event">Events</a>
-  <a routerLink="/user">Users</a>
-</nav>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
