@@ -1,4 +1,4 @@
- import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Event } from './event';
 import { Injectable } from '@angular/core';
 
