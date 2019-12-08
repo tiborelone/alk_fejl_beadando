@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Event } from '../event';
-import { TicketSale } from '../ticket-sale';
-/* import {EVENTS} from '../test-events'; */
+
 import {EventService} from '../event.service';
 import { stringify } from 'querystring';
 
@@ -12,18 +11,11 @@ import { stringify } from 'querystring';
 })
 export class EventComponent implements OnInit {
 
-  selectedEvent: Event;
-  isSelected: Boolean;
-
   events: Event[];
-
-  searchedEvent: String;
-  filteredEvents: Array<Event>;
 
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
-    this.isSelected = false;
     this.getEvents();
   }
 
@@ -37,8 +29,8 @@ export class EventComponent implements OnInit {
     date: String;
     if (!name) { return; }
     this.eventService.addEvent({ name } as Event)
-      .subscribe(hero => {
-        this.events.push(hero);
+      .subscribe(event => {
+        this.events.push(event);
       });
   }
 

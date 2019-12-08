@@ -1,0 +1,22 @@
+<h1>Tickets</h1>
+
+<div> 
+    <ul class="tickets">
+    <li *ngFor="let ticket of tickets">
+        <a routerLink="/ticketdetail/{{ticket.id}}">
+        <span class="badge">{{ticket.id}}</span> {{ticket.name}}
+        </a><button class="delete" title="delete ticket"
+        (click)="delete(ticket)">x</button>
+    </li>
+    </ul>
+</div>
+
+<div>
+    <label>Ticket name:
+      <input #ticketName />
+    </label>
+    
+    <button (click)="add(ticketName.value); ticketName.value=''">
+      add
+    </button>
+</div>
