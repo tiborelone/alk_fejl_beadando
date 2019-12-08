@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {Event} from './event';
-import {EVENTS} from './test-events';
 import { MessageService } from './message.service';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -18,13 +17,6 @@ export class EventService {
 
   constructor( private http: HttpClient, private messageService: MessageService) { }
 
-  /* getEvents(): Event[] {
-    return EVENTS;
-  } */
-
-  /*getEvents(): Observable<Event[]> {
-    return of(EVENTS);
-  }*/
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -39,10 +31,6 @@ export class EventService {
       );
   }
 
-   /*getEvent(id: number): Observable<Event> {
-    this.messageService.add(`EventService: fetched event id=${id}`);
-    return of(EVENTS.find(event => event.id === id));
-  } */
 
   private log(message: string) {
     this.messageService.add(`EventService: ${message}`);

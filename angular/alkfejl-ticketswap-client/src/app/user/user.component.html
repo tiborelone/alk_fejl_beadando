@@ -1,1 +1,29 @@
-<p>user works!</p>
+<h1>Users</h1>
+
+<div> <!-- *ngIf="isSelected == false"> if nothing is selected -->
+    <ul class="users">
+    <li *ngFor="let user of users">
+        <a routerLink="/userdetail/{{user.id}}">
+        <span class="badge">{{user.id}}</span> {{user.name}}
+        </a><button class="delete" title="delete user"
+        (click)="delete(user)">x</button>
+    </li>
+    </ul>
+</div>
+
+<div>
+    <label>User name:
+      <input #userName />
+    </label>
+    
+    <button (click)="add(userName.value); userName.value=''">
+      add
+    </button>
+</div>
+
+
+
+
+
+      
+
