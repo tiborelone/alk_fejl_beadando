@@ -14,7 +14,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 0, name: 'zero', date:'000000'},
       {id: 1, name: 'first', date:'000001'},
       {id: 2, name: 'second', date:'000010'},
-      {id: 42, name: 'truth', date:'010101'},
+      {id: 4, name: 'truth', date:'010101'},
     ];
 
     const users = [
@@ -25,8 +25,13 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
     const tickets = [
-      {id: 80, name: 'teszt',event: 0, barcode: 121112,seller: 50,price: 123},
-      {id: 81, name: 'teszt2',event: 0, barcode: 121112,seller: 10, price: 123}
+      {id: 80, name: 'teszt000',event: 0, barcode: 121112,seller: 50,price: 123},
+      {id: 81, name: 'teszt2',event: 2, barcode: 121112,seller: 10, price: 31},
+      {id: 83, name: 'teszt3',event: 4, barcode: 121112,seller: 50,price: 1232323},
+      {id: 84, name: 'teszt4',event: 2, barcode: 121112,seller: 10, price: 1423},
+      {id: 85, name: 'teszt5',event: 0, barcode: 121112,seller: 50,price: 1223},
+      {id: 86, name: 'teszt6',event: 0, barcode: 121112,seller: 10, price: 1023},
+      {id: 87, name: 'teszt33',event: 4, barcode: 121112,seller: 50,price: 1232323},
     ];
 
 
@@ -36,7 +41,7 @@ export class InMemoryDataService implements InMemoryDbService {
   }
 
 
-  // Overrides the genId method to ensure that a event always has an id.
+  // Overrides the genId method to ensure that an event always has an id.
   // If the events array is empty,
   // the method below returns the initial number (11).
   // if the events array is not empty, the method below returns the highest

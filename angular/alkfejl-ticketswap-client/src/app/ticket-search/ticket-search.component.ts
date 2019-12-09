@@ -27,7 +27,7 @@ export class TicketSearchComponent implements OnInit {
   }
 
   // Push a search term into the observable stream.
-  search(term: string): void {
+  search(): void {
     this.searchTerms.next(this.n.toString());
   }
 
@@ -40,7 +40,7 @@ export class TicketSearchComponent implements OnInit {
       distinctUntilChanged(),
 
       // switch to new search observable each time the term changes
-      switchMap((term: string) => this.ticketService.searchTickets(term)),
+      switchMap((term: string) => this.ticketService.searchTicketsbyEvent(term)),
     );
   }
 }

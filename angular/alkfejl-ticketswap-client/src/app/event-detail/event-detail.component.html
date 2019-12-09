@@ -3,9 +3,12 @@
         <div>
             <span>date: </span>{{event.date}}
         </div>
-    
+        <div>
+            <span>ID: </span>{{event.id}}
+        </div>
+        <app-ticket-search [n]="sEvent()"></app-ticket-search>
 </div>
-<app-ticket-search [n]="event.id"></app-ticket-search>
+
 <div>
     <button mat-raised-button color="primary" (click)="goBack()">Return</button>
 </div>

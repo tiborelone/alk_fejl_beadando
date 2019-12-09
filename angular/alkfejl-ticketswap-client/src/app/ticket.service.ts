@@ -65,6 +65,7 @@ export class TicketService {
   }
 
   addTicket (ticket: Ticket): Observable<Ticket> {
+
     return this.http.post<Ticket>(this.ticketsUrl, ticket, this.httpOptions).pipe(
       tap((newTicket: Ticket) => this.log(`added ticket w/ id=${newTicket.id}`)),
       catchError(this.handleError<Ticket>('addTicket'))
@@ -87,6 +88,17 @@ export class TicketService {
       return of([]);
     }
     return this.http.get<Ticket[]>(`${this.ticketsUrl}/?id=${term}`).pipe(
+      tap(_ => this.log(`found tickets matching "${term}"`)),
+      catchError(this.handleError<Ticket[]>('searchTicket', []))
+    );
+  }
+
+  searchTicketsbyEvent(term: string): Observable<Ticket[]> {
+    if (!term.trim()) {
+      // if not search term, return empty ticket array.
+      return of([]);
+    }
+    return this.http.get<Ticket[]>(`${this.ticketsUrl}/?event=${term}`).pipe(
       tap(_ => this.log(`found tickets matching "${term}"`)),
       catchError(this.handleError<Ticket[]>('searchTicket', []))
     );

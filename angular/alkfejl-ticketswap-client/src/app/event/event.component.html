@@ -1,5 +1,19 @@
 <h1>Events</h1>
 
+<div class="container">
+  <div class="row justify-content-md-center">
+    <mat-form-field>
+      <input matInput placeholder="event name" #eventName />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="event date" #dateV />
+    </mat-form-field>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button mat-raised-button color="primary" (click)="add(eventName.value,dateV.value); eventName.value=''">
+      add
+    </button>
+</div>
+</div>
 
 <div> <!-- *ngIf="isSelected == false"> if nothing is selected -->
   <div class="container">
@@ -17,17 +31,7 @@
   </div>
 </div>
 
-<div class="container">
-    <div class="row justify-content-md-center">
-      <mat-form-field>
-        <input matInput placeholder="Add an event" #eventName />
-      </mat-form-field>
-      <!-- (click) passes input value to add() and then clears the input -->
-      <button mat-raised-button color="primary" (click)="add(eventName.value); eventName.value=''">
-        add
-      </button>
-  </div>
-</div>
+
 
 
 

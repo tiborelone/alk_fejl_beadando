@@ -24,11 +24,10 @@ export class EventComponent implements OnInit {
       .subscribe(events => this.events = events);
   }
 
-  add(name: string): void {
+  add(name: string,date: string): void {
     name = name.trim();
-    date: String;
     if (!name) { return; }
-    this.eventService.addEvent({ name } as Event)
+    this.eventService.addEvent({ name,date } as Event)
       .subscribe(event => {
         this.events.push(event);
       });

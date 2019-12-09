@@ -7,6 +7,9 @@
         <div>
             <span>price: </span>{{ticket.price}} HUF
         </div>
+        <div>
+            <a routerLink="/eventdetail/{{ticket.event}}">Event: {{ticket.event}}</a>
+        </div>
         
     <button mat-raised-button color="primary" (click)="goBack()">Return</button>
     <button mat-raised-button color="primary" >buy</button>

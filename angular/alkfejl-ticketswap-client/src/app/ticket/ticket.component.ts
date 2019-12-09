@@ -25,10 +25,13 @@ export class TicketComponent implements OnInit {
       .subscribe(tickets => this.tickets = tickets);
   }
 
-  add(name: string): void {
+  add(name: string, price:number, seller:number,event:number): void {
     name = name.trim();
     if (!name) { return; }
-    this.ticketService.addTicket({ name } as Ticket)
+    if (!price) { return; }
+    if (!seller) { return; }
+    if (!event) { return; }
+    this.ticketService.addTicket({ name,price,seller,event } as Ticket)
       .subscribe(ticket => {
         this.tickets.push(ticket);
       });
