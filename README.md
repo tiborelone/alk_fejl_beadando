@@ -46,6 +46,14 @@ Beadandónk egy a Ticketswap ötletén alapuló rendszer, amely lehetőve teszi 
 1. Felhasználó: lásd funkcionális követelmények
 2. Admin: lásd funkcionális követelmények, fogalomjegyzék
 
+### Használati eset diagram
+
+![alt text](https://github.com/tiborelone/alk_fejl_beadando/blob/master/Hasznalati.png)
+
+### Egy jegy meghirdetésének menete
+
+![alt text](https://github.com/tiborelone/alk_fejl_beadando/blob/master/JegyHirdetes.png)
+
 ## Tervezés
 
 ### Entitások
@@ -115,6 +123,15 @@ Beadandónk egy a Ticketswap ötletén alapuló rendszer, amely lehetőve teszi 
         - /:id : ID-hez tartozó vásárolni kívánt jegy megjelenítése
             - /:id/event: Vásárolni kívánt jegyhez tartozó esemény
             - /:id/seller: Jegyet vásárolni kívánó felhasználó megtekintése
+            
+### Használt eszközök
+
+- Github - verziókezelő
+- NetBeans - Java fordító program
+- Maven - project management/függőségek kezelése
+- Spring/Springboot - keretrendszer
+- Visual Studio Code - Lokális IDE
+- Node.js - Javascript környezet
 
 ### Könyvtárstruktúra
 
@@ -140,6 +157,26 @@ Beadandónk egy a Ticketswap ötletén alapuló rendszer, amely lehetőve teszi 
     - WebSecurityConfig.java
 - TicketSwapApplication.java
 
+
+## Felhasználói dokumentáció
+
+### Telepítés
+
+- Látogasson el a https://github.com/tiborelone/alk_fejl_beadando/ oldalra.
+- Itt kattintson a "Clone and Download" gombra, és azon belül kattintson a "Download as Zip" gombra.
+- A letöltött állományt csomagolja ki.
+- npm i parancsot adjuk ki parancssorban a kicsomagolt állomány mappájában.
+- npm start-al elindíthatjuk a programot.
+
+### A telepítéshez szükséges:
+
+- NodeJS és npm, ami innen letölthető: npmjs.com/get-npm
+- Internet elérés
+
+### Használata
+- Böngészőben a keresősávba írjuk be, hogy: localhost:4200
+- Használhatjuk a programot.
+    - Bizonyos funkciók használatához bejelentkezés szükséges
 
 
 
