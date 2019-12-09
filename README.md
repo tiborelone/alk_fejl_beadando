@@ -174,7 +174,7 @@ Beadandónk egy a Ticketswap ötletén alapuló rendszer, amely lehetőve teszi 
 - Internet elérés
 
 ### Használata
-- Böngészőben a keresősávba írjuk be, hogy: localhost:8080
+- Böngészőben a keresősávba írjuk be, hogy: localhost:4200
 - Használhatjuk a programot.
     - Bizonyos funkciók használatához bejelentkezés szükséges
 
