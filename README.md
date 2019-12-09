@@ -157,6 +157,115 @@ Beadandónk egy a Ticketswap ötletén alapuló rendszer, amely lehetőve teszi 
     - WebSecurityConfig.java
 - TicketSwapApplication.java
 
+###---------
+
++---app
+|   |   app-routing.module.ts
+|   |   app.component.css
+|   |   app.component.html
+|   |   app.component.spec.ts
+|   |   app.component.ts
+|   |   app.module.ts
+|   |   auth.guard.spec.ts
+|   |   auth.guard.ts
+|   |   auth.service.spec.ts
+|   |   auth.service.ts
+|   |   event.service.spec.ts
+|   |   event.service.ts
+|   |   event.spec.ts
+|   |   event.ts
+|   |   in-memory-data.service.spec.ts
+|   |   in-memory-data.service.ts
+|   |   message.service.spec.ts
+|   |   message.service.ts
+|   |   ticket.service.spec.ts
+|   |   ticket.service.ts
+|   |   ticket.spec.ts
+|   |   ticket.ts
+|   |   user.service.spec.ts
+|   |   user.service.ts
+|   |   user.spec.ts
+|   |   user.ts
+|   |   
+|   +---dashboard
+|   |       dashboard.component.css
+|   |       dashboard.component.html
+|   |       dashboard.component.spec.ts
+|   |       dashboard.component.ts
+|   |       
+|   +---event
+|   |       event.component.css
+|   |       event.component.html
+|   |       event.component.spec.ts
+|   |       event.component.ts
+|   |       
+|   +---event-detail
+|   |       event-detail.component.css
+|   |       event-detail.component.html
+|   |       event-detail.component.spec.ts
+|   |       event-detail.component.ts
+|   |       
+|   +---event-search
+|   |       event-search.component.css
+|   |       event-search.component.html
+|   |       event-search.component.spec.ts
+|   |       event-search.component.ts
+|   |       
+|   +---home
+|   |       home.component.css
+|   |       home.component.html
+|   |       home.component.spec.ts
+|   |       home.component.ts
+|   |       
+|   +---login-form
+|   |       login-form.component.css
+|   |       login-form.component.html
+|   |       login-form.component.spec.ts
+|   |       login-form.component.ts
+|   |       
+|   +---messages
+|   |       messages.component.css
+|   |       messages.component.html
+|   |       messages.component.spec.ts
+|   |       messages.component.ts
+|   |       
+|   +---ticket
+|   |       ticket.component.css
+|   |       ticket.component.html
+|   |       ticket.component.spec.ts
+|   |       ticket.component.ts
+|   |       
+|   +---ticket-detail
+|   |       ticket-detail.component.css
+|   |       ticket-detail.component.html
+|   |       ticket-detail.component.spec.ts
+|   |       ticket-detail.component.ts
+|   |       
+|   +---ticket-search
+|   |       ticket-search.component.css
+|   |       ticket-search.component.html
+|   |       ticket-search.component.spec.ts
+|   |       ticket-search.component.ts
+|   |       
+|   +---user
+|   |       user.component.css
+|   |       user.component.html
+|   |       user.component.spec.ts
+|   |       user.component.ts
+|   |       
+|   \---user-detail
+|           user-detail.component.css
+|           user-detail.component.html
+|           user-detail.component.spec.ts
+|           user-detail.component.ts
+|           
++---assets
+|       .gitkeep
+|       
+\---environments
+        environment.prod.ts
+        environment.ts
+
 
 ## Felhasználói dokumentáció
 
