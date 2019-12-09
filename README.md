@@ -126,12 +126,12 @@ Beadandónk egy a Ticketswap ötletén alapuló rendszer, amely lehetőve teszi 
             
 ### Használt eszközök
 
--Github - verziókezelő
--NetBeans - Java fordító program
--Maven - project management/függőségek kezelése
--Spring/Springboot - keretrendszer
--Visual Studio Code - Lokális IDE
--Node.js - Javascript környezet
+- Github - verziókezelő
+- NetBeans - Java fordító program
+- Maven - project management/függőségek kezelése
+- Spring/Springboot - keretrendszer
+- Visual Studio Code - Lokális IDE
+- Node.js - Javascript környezet
 
 ### Könyvtárstruktúra
 
