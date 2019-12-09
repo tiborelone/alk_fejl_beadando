@@ -46,6 +46,14 @@ Beadandónk egy a Ticketswap ötletén alapuló rendszer, amely lehetőve teszi 
 1. Felhasználó: lásd funkcionális követelmények
 2. Admin: lásd funkcionális követelmények, fogalomjegyzék
 
+### Használati eset diagram
+
+![alt text](https://github.com/tiborelone/alk_fejl_beadando/blob/master/Hasznalati.png)
+
+### Egy jegy meghirdetésének menete
+
+![alt text](https://github.com/tiborelone/alk_fejl_beadando/blob/master/JegyHirdetes.png)
+
 ## Tervezés
 
 ### Entitások
